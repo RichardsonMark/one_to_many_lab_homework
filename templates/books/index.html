@@ -4,18 +4,19 @@
 
 {% for book in all_books %}
     <div class="book">
-        <p>Author: {{book.author.last_name}}, {{book.author.first_name}}</p><br><br>
-        <p>Title: {{book.title}}</p>
+        <h3>{{book.title}}</h3>
+        <hr>
+        <p>Author: {{book.author.last_name}}, {{book.author.first_name}}</p>
         <p>Genre: {{book.publisher}}</p>
         <p>Publisher: {{book.genre}}</p>
-    </div>
+
 
     <a href="/books/{{book.id}}">{{book.title}}</a>
 
     <form action="/books/{{book.id}}/delete" method="POST">
         <button type="submit">Delete</button>
     </form>
-
+    </div>
 
 {% endfor %}
 
