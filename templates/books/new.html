@@ -36,7 +36,6 @@
         <select name="author_id" id="author">
             {% for author in all_authors %}
                 <option value="{{author.id}}">{{author.first_name}} {{author.last_name}}</option>
-                {{ author }}
             {% endfor %}
         </select>
     </div>
